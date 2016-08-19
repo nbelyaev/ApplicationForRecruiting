@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.CreateNewPositionPage" Title="Create a Position">
+	<ContentPage.Content>
+		<StackLayout BackgroundColor="White" Spacing="20" >
+			<StackLayout Padding="10">
+			<Label Text="Position Name" />
+			<Entry Placeholder="Enter a Description" x:Name="positionNameTxt" />
+			</StackLayout>
+
+			<StackLayout Padding="10">
+			<Label Text="Enter Description" />		
+			<StackLayout BackgroundColor="Silver" Padding="1">
+				
+				<Editor BackgroundColor="White" x:Name="positionName" HeightRequest="100">
+				</Editor>
+			</StackLayout>
+
+			</StackLayout>
+			<StackLayout Spacing="0">
+			<Button	Text="Add new Position" BackgroundColor="Green" TextColor="White" Clicked="createNewPosition"/>
+			<Button	Text="Cancel" BackgroundColor="Red" TextColor="White" Clicked="cancelBttn"/>
+			</StackLayout>
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

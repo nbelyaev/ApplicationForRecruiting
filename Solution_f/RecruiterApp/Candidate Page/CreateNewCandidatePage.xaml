@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.CreateNewCandidatePage" Title="New Candidate">
+	<ContentPage.Content>
+		<ScrollView>
+		<StackLayout BackgroundColor="White" Spacing="20" >
+			<StackLayout Padding="10">
+				<Label Text="Candidate Personal Information" />
+				<Entry Placeholder="First Name" x:Name="candidateFirstName" />
+				<Entry Placeholder="Last Name" x:Name="candidateLastName" />
+				<Entry Placeholder="Email Address" x:Name="candidateEmail" />
+				<Entry Placeholder="Phone Number" x:Name="candidatePhone" />
+				<Label Text="Candidate Address Information" />
+				<Entry Placeholder="Street" x:Name="candidateStreet" />
+				<Entry Placeholder="Street 2" x:Name="candidateStreet2" />
+				<Entry Placeholder="City" x:Name="candidateCity" />
+				<Entry Placeholder="State" x:Name="candidateState" />
+				<Entry Placeholder="Zip Code" x:Name="candidateZip" />
+				<Label Text="Position:"></Label>
+				<Picker x:Name="PickerPositions">
+					<Picker.Items>
+					<x:String>Candidate</x:String>
+					<x:String>Recruiter</x:String>
+					<x:String>Position</x:String>
+				</Picker.Items>
+				</Picker>
+			</StackLayout>
+
+			<StackLayout Padding="10">
+			<Label Text="Skills" />		
+			<StackLayout BackgroundColor="Silver" Padding="1">
+				
+				<Editor BackgroundColor="White" x:Name="positionName" HeightRequest="100">
+				</Editor>
+			</StackLayout>
+
+			</StackLayout>
+			<StackLayout Spacing="0">
+			<Button	Text="Add new Candidate" BackgroundColor="Green" TextColor="White" Clicked="AddCandidate" />
+			<Button	Text="Cancel" BackgroundColor="Red" TextColor="White" Clicked="cancelBttn" />
+			</StackLayout>
+
+		</StackLayout>
+			</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

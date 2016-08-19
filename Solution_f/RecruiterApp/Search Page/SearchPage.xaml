@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="RecruiterApp.SearchPage" Title="Search">
+	<ContentPage.Content>
+		<StackLayout Padding="10">
+			<Label Text="Select Search Field:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+			</Label>
+			
+			<Picker x:Name="SearchFieldPicker" SelectedIndex="1" Grid.Row="1" HorizontalOptions="FillAndExpand">
+				<Picker.Items>
+					<x:String>Candidate</x:String>
+					<x:String>Recruiter</x:String>
+					<x:String>Position</x:String>
+				</Picker.Items>
+			</Picker>
+			<Entry Placeholder="Search Criteria">
+			</Entry>
+			<Button Text="Search" TextColor="White" VerticalOptions="CenterAndExpand" BackgroundColor="Green" Clicked="searchContent">
+			</Button>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

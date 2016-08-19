@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.InformationAboutCandidatePage">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="15">
+				<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+					<Label Text="Date Added:" FontSize="10">
+					</Label>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+						<Label x:Name="lblDateAdded" Text="August 7, 2016" TextColor="Silver" FontSize="10">
+						</Label>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+					<Label Text="Date Modified:" FontSize="10">
+					</Label>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+						<Label  x:Name="lblDateModified" Text="August 8, 2016" TextColor="Silver" FontSize="10">
+						</Label>
+					</StackLayout>
+				</StackLayout>
+				<Label  x:Name="lblName" Text="Cristian Pintado" FontAttributes="Bold" FontSize="25">
+				</Label>
+				<Label  x:Name="lblRecruiterName" Text="Reggie Miller" FontSize="10">
+				</Label>
+				<Label  x:Name="lblStreet" Text="1111 N. Odell">
+				</Label>
+				<Label  x:Name="lblCityStateZip" Text="Niles, IL 60714">
+				</Label>
+				<Label  x:Name="lblPhoneNumber" Text="708-457-2311">
+				</Label>
+				<Label  x:Name="lblemail" Text="cristian.pintado@us.sogeti.com">
+				</Label>
+				<StackLayout HorizontalOptions="StartAndExpand">
+				<Label Text="Position:" FontAttributes="Bold">
+				</Label>
+				<Label x:Name="lblPosition" Text=".NET Developer">
+				</Label>
+				</StackLayout>
+				<StackLayout HorizontalOptions="StartAndExpand">
+				<Label Text="Skills: " FontAttributes="Bold">
+				</Label>
+				<Label x:Name="lblSkills" Text=".Net Development, iOS, Java, C#, water bottle, projector ">
+				</Label>
+				</StackLayout>
+				<BoxView Color="Black" HeightRequest="2">
+				</BoxView>
+				
+				<!--Starting To Do List below line.-->
+				
+				<StackLayout BackgroundColor="White">
+					<Label Text="To Do List" FontAttributes="Bold">
+					</Label>
+					<!--Phone Interview Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Phone Interview" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch IsEnabled="false" x:Name="SwitchPhoneInterview">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					
+					<!--Face To Face Interview Portion-->
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="PhoneInterviewComment">
+						</Editor>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Face To Face Interview" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="SwitchFace2Face" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<Entry HorizontalTextAlignment="Center" x:Name="interviewerName" IsVisible="false">
+					</Entry>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="Face2FaceInterviewComment">
+						</Editor>
+					</StackLayout>
+					
+					<!--Send Online Application Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Send Online Application" YAlign="Center">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Button x:Name="OnlineApplicationButton" Text="   Send!   " BackgroundColor="Green" TextColor="White" IsEnabled="true">
+							</Button>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="OnlineApplicationComment">
+						</Editor>
+					</StackLayout>
+					
+					<!--Gather Details and References Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Gather Details and References" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="SwitchDetailsReferences" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="DetailsReferencesComment">
+						</Editor>
+					</StackLayout>
+					
+					<!--Sending email for ADP Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Send email for ADP" YAlign="Center">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Button x:Name="ADPSent" Text="   Send!   " BackgroundColor="Green" TextColor="White" IsEnabled="true">
+							</Button>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="ADPSentComment">
+						</Editor>
+					</StackLayout>
+					<!--Verbal Offer Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Verbal Offer" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="SwitchVerbalOffer" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="VerbalOfferComment">
+						</Editor>
+					</StackLayout>
+					<!--Formal Offer Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Formal Offer Sent" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="SwitchFormalOffer" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="FormalOfferComment">
+						</Editor>
+					</StackLayout>
+					<!--Completed Sogeti Resume Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Completed Sogeti Resume" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="SwitchSogetiResume" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="CompletedSogetiResumeComment">
+						</Editor>
+					</StackLayout>
+					<!--Cleared Background Check Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Cleared Background and Drug Test" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="BackgroundAndDrugTest" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="BackgroundandDrugTestComment">
+						</Editor>
+					</StackLayout>
+					<!--Accepted Offer Portion-->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Accepted Offer" YAlign="End">
+						</Label>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+							<Switch x:Name="AcceptedOffer" IsEnabled="false">
+							</Switch>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout BackgroundColor="Black" Padding="1">
+						<Editor BackgroundColor="White" IsEnabled="false" x:Name="AcceptedOfferComment">
+						</Editor>
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

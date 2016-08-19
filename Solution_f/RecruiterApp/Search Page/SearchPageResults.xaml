@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.SearchPageResults" Title="Search Results">
+	<ContentPage.Content>
+		<StackLayout>
+		<Grid RowSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
+			<ListView x:Name="listOfPositions" ItemTapped="onItemTapped" IsPullToRefreshEnabled="true" Grid.Row="1" ItemsSource="{Binding Positions}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<ViewCell.ContextActions>
+								<MenuItem CommandParameter="{Binding Positions}" />
+							</ViewCell.ContextActions>
+							<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
+								<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+									<Label Text="{Binding Name}" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

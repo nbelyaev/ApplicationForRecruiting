@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:local="clr-namespace:RecruiterApp" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="RecruiterApp.RecruiterTab">
+	<TabbedPage.Children>
+		<NavigationPage Title="History" Icon="bookIcon.png">
+			<x:Arguments>
+				<local:HistoryPage/>
+			</x:Arguments>
+		</NavigationPage>
+		<NavigationPage Title="Candidate" Icon="candidateIcon.png" >
+			<x:Arguments>
+				<local:CandidatePage/>
+			</x:Arguments>
+		</NavigationPage>
+		<NavigationPage Title="Position" Icon="jobIcon.png">
+			<x:Arguments>
+				<local:PositionPage/>
+			</x:Arguments>
+		</NavigationPage>
+		<NavigationPage Title="Search" Icon="searchIcon.png">
+			<x:Arguments>
+				<local:SearchPage/>
+			</x:Arguments>
+		</NavigationPage>
+		<local:TodoList/>
+		<local:InterviewTypePage/>
+	</TabbedPage.Children>
+</TabbedPage>
