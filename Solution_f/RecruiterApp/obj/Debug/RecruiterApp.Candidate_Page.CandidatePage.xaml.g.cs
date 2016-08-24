@@ -17,11 +17,15 @@ namespace RecruiterApp {
     public partial class CandidatePage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator syncIndicator;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView candidateListView;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(CandidatePage));
+            syncIndicator = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("syncIndicator");
             candidateListView = this.FindByName<global::Xamarin.Forms.ListView>("candidateListView");
         }
     }

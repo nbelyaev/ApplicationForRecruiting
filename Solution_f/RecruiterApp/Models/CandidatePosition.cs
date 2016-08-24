@@ -4,14 +4,16 @@ namespace RecruiterApp
 {
 	public class CandidatePosition
 	{
-		int id;
-		int positionId;
+        //int id;
+        //int positionId;
+        [JsonProperty(PropertyName = "id")]
+        public string id { get; set; }
 
-		[JsonProperty(PropertyName = "CandidatePositionId")]
-		public int CandidatePositionId { get { return this.id; } set { this.id = value; } }
+        [JsonProperty(PropertyName = "candidateId")]
+		public string CandidateId { get; set; }
 
-		[JsonProperty(PropertyName = "PositionId")]
-		public int PositionId { get { return this.positionId; } set { this.positionId = value; } }
-	}
+		[JsonProperty(PropertyName = "positionId")]
+		public string PositionId { get; set; }
+    }
 }
 

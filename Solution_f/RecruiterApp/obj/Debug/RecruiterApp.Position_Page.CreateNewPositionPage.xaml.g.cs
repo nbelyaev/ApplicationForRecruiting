@@ -17,16 +17,16 @@ namespace RecruiterApp {
     public partial class CreateNewPositionPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Entry positionNameTxt;
+        private global::Xamarin.Forms.Entry positionName;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Editor positionName;
+        private global::Xamarin.Forms.Editor positionDescription;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(CreateNewPositionPage));
-            positionNameTxt = this.FindByName<global::Xamarin.Forms.Entry>("positionNameTxt");
-            positionName = this.FindByName<global::Xamarin.Forms.Editor>("positionName");
+            positionName = this.FindByName<global::Xamarin.Forms.Entry>("positionName");
+            positionDescription = this.FindByName<global::Xamarin.Forms.Editor>("positionDescription");
         }
     }
 }

@@ -4,7 +4,7 @@
 		<StackLayout>
 			<StackLayout>
 			<Label Text="{Binding positions.Name}" Font="25" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
-			<Label Text="{Binding positions.positionDescription}" HorizontalTextAlignment="Center" />
+			<Label Text="{Binding positions.Description}" HorizontalTextAlignment="Center" />
 			</StackLayout>
 			<Grid RowSpacing="0">
 				<Grid.RowDefinitions>

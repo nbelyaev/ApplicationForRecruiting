@@ -4,14 +4,14 @@
 		<StackLayout BackgroundColor="White" Spacing="20" >
 			<StackLayout Padding="10">
 			<Label Text="Position Name" />
-			<Entry Placeholder="Enter a Description" x:Name="positionNameTxt" />
+        <Entry Placeholder="Enter a Position Name" x:Name="positionName" />
 			</StackLayout>
 
 			<StackLayout Padding="10">
 			<Label Text="Enter Description" />		
 			<StackLayout BackgroundColor="Silver" Padding="1">
-				
-				<Editor BackgroundColor="White" x:Name="positionName" HeightRequest="100">
+
+        <Editor  BackgroundColor="White" x:Name="positionDescription" HeightRequest="100">
 				</Editor>
 			</StackLayout>
 

@@ -31,6 +31,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ActivityIndicatorScope.cs" />
     <Compile Include="Models\CandidatePosition.cs" />
     <Compile Include="Models\CandidateSkill.cs" />
     <Compile Include="Models\CandidateStatus.cs" />

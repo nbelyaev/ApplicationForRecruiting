@@ -78,29 +78,8 @@ namespace CodeFirstAppService
 
 
             
-            List<Candidate> Candidates = new List<Candidate>
-            {
-                new Candidate { Id = Guid.NewGuid().ToString(), city="Chicago", candidateInfoNotes="ok candidate",
-                    clearedBackgroundComments ="spoopy", firstName="Eric", lastName="Ruelas" },
-                new Candidate { Id = Guid.NewGuid().ToString(), city="Chicago", candidateInfoNotes="ok candidate",
-                    clearedBackgroundComments ="spoopy", firstName="Cristian", lastName="Pintedo" }, 
-            };
-
-            foreach (Candidate Candidate in Candidates) {
-                context.Set<Candidate>().Add(Candidate);
-            }
 
             
-
-            List<Interview> Interviews = new List<Interview>
-            {
-                new Interview { Id = Guid.NewGuid().ToString(), InterviewCandidate=Candidates[0],
-                    InterviewComments ="it was ok", InterviewRating=3.2, InterviewDateOfInterview=DateTime.Now },
-            };
-
-            foreach (Interview Interview in Interviews) {
-                context.Set<Interview>().Add(Interview);
-            }
 
             List<Role> Roles = new List<Role>
             {
@@ -155,7 +134,7 @@ namespace CodeFirstAppService
 
 
 
-            List<Status> Statuss = new List<Status>
+            List<Status> Statuses = new List<Status>
             {
                 new Status { Id = Guid.NewGuid().ToString(), StatusName="Awaiting Approval"},
 
@@ -164,7 +143,7 @@ namespace CodeFirstAppService
                 new Status { Id = Guid.NewGuid().ToString(), StatusName="Not Ready - contact later"},
             };
 
-            foreach (Status Status in Statuss) {
+            foreach (Status Status in Statuses) {
                 context.Set<Status>().Add(Status);
             }
 
@@ -195,6 +174,111 @@ namespace CodeFirstAppService
                 context.Set<User>().Add(User);
             }
 
+
+
+
+            List<Candidate> Candidates = new List<Candidate>
+            {
+                new Candidate { Id = Guid.NewGuid().ToString(), city="Chicago", candidateInfoNotes="ok candidate",
+                    clearedBackgroundComments ="spoopy", firstName="Eric", lastName="Ruelas", State=States[0],
+                    Recruiter = Users[1], Source=Sources[0] },
+                new Candidate { Id = Guid.NewGuid().ToString(), city="Chicago", candidateInfoNotes="ok candidate",
+                    clearedBackgroundComments ="spoopy", firstName="Cristian", lastName="Pintedo", State=States[0],
+                    Recruiter = Users[1], Source=Sources[0]  },
+            };
+
+            foreach (Candidate Candidate in Candidates) {
+                context.Set<Candidate>().Add(Candidate);
+            }
+
+
+
+            List<Interview> Interviews = new List<Interview>
+            {
+                new Interview { Id = Guid.NewGuid().ToString(), InterviewCandidate=Candidates[0],
+                    InterviewComments ="it was ok", InterviewRating=3.2, InterviewDateOfInterview=DateTime.Now },
+            };
+
+            foreach (Interview Interview in Interviews) {
+                context.Set<Interview>().Add(Interview);
+            }
+
+
+
+            List<UserRole> UserRoles = new List<UserRole>
+            {
+                new UserRole { Id = Guid.NewGuid().ToString(),Role= Roles[0], User=Users[0] },
+                new UserRole { Id = Guid.NewGuid().ToString(),Role= Roles[1], User=Users[1] },
+            };
+
+            foreach (UserRole UserRole in UserRoles) {
+                context.Set<UserRole>().Add(UserRole);
+            }
+
+
+            List<CandidatePosition> CandidatePositions = new List<CandidatePosition>
+            {
+                new CandidatePosition {  Id = Guid.NewGuid().ToString(), Candidate=Candidates[0],Position=positons[0] },
+                new CandidatePosition { Id = Guid.NewGuid().ToString(),  Candidate=Candidates[1],Position=positons[1] },
+            };
+
+            foreach (CandidatePosition CandidatePosition in CandidatePositions) {
+                context.Set<CandidatePosition>().Add(CandidatePosition);
+            }
+
+
+
+
+            List<CandidateSkill> CandidateSkills = new List<CandidateSkill>
+            {
+                new CandidateSkill {  Id = Guid.NewGuid().ToString(), Candidate=Candidates[0], Skill=Skills[0] },
+                new CandidateSkill {  Id = Guid.NewGuid().ToString(), Candidate=Candidates[1], Skill=Skills[0]  },
+            };
+
+            foreach (CandidateSkill CandidateSkill in CandidateSkills) {
+                context.Set<CandidateSkill>().Add(CandidateSkill);
+            }
+
+
+
+
+            List<PositionSkill> PositionSkills = new List<PositionSkill>
+            {
+                new PositionSkill {  Id = Guid.NewGuid().ToString(), Position=positons[0], Skill=Skills[0] },
+                new PositionSkill {  Id = Guid.NewGuid().ToString(), Position=positons[1], Skill=Skills[0]  },
+            };
+
+            foreach (PositionSkill PositionSkill in PositionSkills) {
+                context.Set<PositionSkill>().Add(PositionSkill);
+            }
+
+
+
+            List<InterviewAssign> InterviewAssigns = new List<InterviewAssign>
+            {
+                new InterviewAssign {   Id = Guid.NewGuid().ToString(), InterviewAssignInterview=Interviews[0]
+                    ,InterviewAssignInterviewer=Users[0] },
+                new InterviewAssign {   Id = Guid.NewGuid().ToString(), InterviewAssignInterview=Interviews[0]
+                    ,InterviewAssignInterviewer=Users[1] },
+            };
+
+            foreach (InterviewAssign InterviewAssign in InterviewAssigns) {
+                context.Set<InterviewAssign>().Add(InterviewAssign);
+            }
+
+
+
+            List<CandidateStatus> CandidateStatuses = new List<CandidateStatus>
+            {
+                new CandidateStatus {  Id = Guid.NewGuid().ToString(),  Candidate=Candidates[0], SetBy=Users[0],
+                        Status =Statuses[0], CandidateStatusNotes="seeded"},
+                new CandidateStatus {  Id = Guid.NewGuid().ToString(),  Candidate=Candidates[1], SetBy=Users[1],
+                        Status =Statuses[1], CandidateStatusNotes="seeded"},
+            };
+
+            foreach (CandidateStatus CandidateStatus in CandidateStatuses) {
+                context.Set<CandidateStatus>().Add(CandidateStatus);
+            }
 
 
             base.Seed(context);

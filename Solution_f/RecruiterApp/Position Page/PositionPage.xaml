@@ -14,7 +14,7 @@
 					<DataTemplate>
 						<ViewCell>
 							<ViewCell.ContextActions>
-								<MenuItem Clicked="OnComplete" CommandParameter="{Binding Position}" />
+								<MenuItem  CommandParameter="{Binding Name}" />
 							</ViewCell.ContextActions>
 							<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
 								<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">

@@ -8,10 +8,10 @@ namespace CodeFirstAppService.DataObjects {
 		//int positionId;
 
 		//[JsonProperty(PropertyName = "CandidatePositionId")]
-		//public int CandidateId { get; set; } //{ get { return this.id; } set { this.id = value; } }
+		public string CandidateId { get; set; } //{ get { return this.id; } set { this.id = value; } }
         public virtual Candidate Candidate { get; set; }
         //[JsonProperty(PropertyName = "PositionId")]
-        //public int PositionId { get; set; }//{ get { return this.positionId; } set { this.positionId = value; } }
+        public string PositionId { get; set; }//{ get { return this.positionId; } set { this.positionId = value; } }
         public virtual Position Position { get; set; }
     }
 }
