@@ -17,6 +17,12 @@ namespace RecruiterApp {
     public partial class PositionResultsPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label positionName;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label positionDescription;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator syncIndicator;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -25,6 +31,8 @@ namespace RecruiterApp {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(PositionResultsPage));
+            positionName = this.FindByName<global::Xamarin.Forms.Label>("positionName");
+            positionDescription = this.FindByName<global::Xamarin.Forms.Label>("positionDescription");
             syncIndicator = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("syncIndicator");
             positionCandidateList = this.FindByName<global::Xamarin.Forms.ListView>("positionCandidateList");
         }

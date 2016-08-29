@@ -13,36 +13,28 @@ namespace RecruiterApp
 	{
 		static ItemManager defaultInstance = new ItemManager();
 		MobileServiceClient client;
-		IMobileServiceTable<TodoItem> todoTable;
-		//IMobileServiceTable<Position> positionTable;
-
-        //****************************
+		IMobileServiceTable<TodoItem> todoTable;//used for testing database remove prior to deployment
         IMobileServiceTable<Position> positionTable;
         IMobileServiceTable<Candidate> candidateTable;
         IMobileServiceTable<CandidatePosition> candidatePositionTable;
-
-        //static int positions = -1;
-
-        //public async Task<int> countPositions() {
-        //    return await positionTable.ToListAsync().Count;
-        //}
+        
         //****************************
         private ItemManager()
 		{
-			this.client = new MobileServiceClient(
+			client = new MobileServiceClient(
 				Constants.ApplicationURL);
-			this.todoTable = client.GetTable<TodoItem>();
+			todoTable = client.GetTable<TodoItem>();//remove prior to deployment
             
 			try
 			{
-				this.positionTable = client.GetTable<Position>();
-                this.candidateTable = client.GetTable<Candidate>();
-                this.candidatePositionTable = client.GetTable<CandidatePosition>();
+				positionTable = client.GetTable<Position>();
+                candidateTable = client.GetTable<Candidate>();
+                candidatePositionTable = client.GetTable<CandidatePosition>();
 
             }
 			catch (Exception ex)
 			{
-
+                Debug.WriteLine(ex.Message);
 			}
 		}
 
@@ -64,28 +56,12 @@ namespace RecruiterApp
 		}
 
         //******************************
-        //public async Task<List<Position>> GetPositionListAsync(bool syncItems = false) {
-        //    try {
-        //        List<Position> items = await positionTable
-        //                .Where(Position => 1==1)
-        //                .ToListAsync();
-
-        //        return new List<Position>(items);
-        //    }
-        //    catch (MobileServiceInvalidOperationException msioe) {
-        //        Debug.WriteLine(@"Invalid sync operation: {0}", msioe.Message);
-        //    }
-        //    catch (Exception e) {
-        //        Debug.WriteLine(@"Sync error: {0}", e.Message);
-        //    }
-        //    return null;
-        //}
+        //Database Interactions
 
 
         public async Task<ObservableCollection<Position>> GetPositionsAsync(bool syncItems = false) {
             try {
                 IEnumerable<Position> items = await positionTable
-
                     .ToEnumerableAsync();
 
                 return new ObservableCollection<Position>(items);
@@ -99,19 +75,7 @@ namespace RecruiterApp
             return null;
         }
 
-
-        //public async Task SavePositionAsync(Position item) {
-        //    if (item.Id == null) {
-        //        await positionTable.InsertAsync(item);
-        //    }
-        //    else {
-        //        await positionTable.UpdateAsync(item);
-        //    }
-        //}
-
-
-
-
+        
         public async Task<ObservableCollection<Candidate>> GetCandidatesAsync(bool syncItems = false) {
             try {
                 IEnumerable<Candidate> items = await candidateTable
@@ -132,7 +96,7 @@ namespace RecruiterApp
         public async Task<ObservableCollection<Candidate>> GetCandidatesForPositionAsync( Position position, bool syncItems = false) {
             try {
                 IEnumerable<CandidatePosition> candidatePositions = await candidatePositionTable
-                    .Where(cp => cp.PositionId == position.Id)
+                    .Where(cp => cp.PositionId == position.Id && !cp.Deleted)
                     .ToEnumerableAsync();
 
                 List<CandidatePosition> list= candidatePositions.ToList();
@@ -143,19 +107,20 @@ namespace RecruiterApp
 
 
 
-                IEnumerable<Candidate> items = await candidateTable
-                    //.Where(c => candidatePositions.Any( id => c.id==id.CandidateId) )
-                    .Where(c=> candIds.Contains(c.id))
-                    //.Where(c => candIds.Contains(c.id) && candIds.Count!=0)
-                    .ToEnumerableAsync();
-
+                IEnumerable<Candidate> items;
+                //if candIDs is empty then items would automatically contain all of the candidates
+                //here items are replaced with an empty list with the message
                 if (candIds.Count == 0) {
                     List<Candidate> emptyList = new List<Candidate>();
                     emptyList.Add(new Candidate { lastName = "There are no candidates who are currently running for this position" });
                     items = emptyList;
                 }
+                else {
+                    items = await candidateTable
+                    .Where(c => candIds.Contains(c.id) && !c.Deleted)
+                    .ToEnumerableAsync();
 
-                //Debug.WriteLine(items.Count());
+                }
 
                 return new ObservableCollection<Candidate>(items);
             }
@@ -168,13 +133,40 @@ namespace RecruiterApp
             return null;
         }
 
+        //Getting all current open positions
+        public async Task<ObservableCollection<Position>> GetPositionItemsAsync(bool syncItems = false) {
+            try {
+                IEnumerable<Position> items = await positionTable
+                    .ToEnumerableAsync();
+
+                return new ObservableCollection<Position>(items);
+            }
+            catch (MobileServiceInvalidOperationException msioe) {
+                Debug.WriteLine(@"Invalid sync operation: {0}", msioe.Message);
+            }
+            catch (Exception e) {
+                Debug.WriteLine(@"Sync error: {0}", e.Message);
+            }
+            return null;
+        }
+
+        //Saving a new Position
+        public async Task SaveNewPositionAsync(Position position) {
+            if (position.Id == null) {
+                await positionTable.InsertAsync(position);
+            }
+            else {
+                await positionTable.UpdateAsync(position);
+            }
+        }
+
         //******************************
 
 
+        //*************************************************************************
+        //********************************Remove***********************************
 
-
-
-
+        //remove prior to deployment
         public async Task<ObservableCollection<TodoItem>> GetTodoItemsAsync(bool syncItems = false)
 		{
 			try
@@ -195,7 +187,7 @@ namespace RecruiterApp
 			}
 			return null;
 		}
-
+        //remove prior to deployment
 		public async Task SaveTaskAsync(TodoItem item)
 		{
 			if (item.Id == null)
@@ -207,40 +199,10 @@ namespace RecruiterApp
 				await todoTable.UpdateAsync(item);
 			}
 		}
+        //********************************Remove***********************************
+        //*************************************************************************
 
 
-		//Getting all current open positions
-		public async Task<ObservableCollection<Position>> GetPositionItemsAsync(bool syncItems = false)
-		{
-			try
-			{
-				IEnumerable<Position> items = await positionTable
-					.ToEnumerableAsync();
-
-				return new ObservableCollection<Position>(items);
-			}
-			catch (MobileServiceInvalidOperationException msioe)
-			{
-				Debug.WriteLine(@"Invalid sync operation: {0}", msioe.Message);
-			}
-			catch (Exception e)
-			{
-				Debug.WriteLine(@"Sync error: {0}", e.Message);
-			}
-			return null;
-		}
-
-		//Saving a new Position
-		public async Task SaveNewPositionAsync(Position position)
-		{
-			if (position.Id == null)
-			{
-				await positionTable.InsertAsync(position);
-			}
-			else
-			{
-				await positionTable.UpdateAsync(position);
-			}
-		}
+        
 	}
 }

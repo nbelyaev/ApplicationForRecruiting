@@ -17,7 +17,13 @@ namespace RecruiterApp
 			InitializeComponent();
 		}
 
-		public void ChangedPosition(object sender, EventArgs e)
+        public CandidateDetailsPage(Candidate cand) {
+            BindingContext = cand;
+            InitializeComponent();
+            
+        }
+
+        public void ChangedPosition(object sender, EventArgs e)
 		{
 			SaveCandidateToPosition.IsVisible = true;
 		}

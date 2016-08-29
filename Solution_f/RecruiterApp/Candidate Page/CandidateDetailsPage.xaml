@@ -19,7 +19,7 @@
 						</Label>
 					</StackLayout>
 				</StackLayout>
-				<Label  x:Name="lblName" Text="Cristian Pintado" FontAttributes="Bold" FontSize="25">
+				<Label  x:Name="lblName"  Text="{Binding nameString}" FontAttributes="Bold" FontSize="25">
 				</Label>
 				<Label  x:Name="lblRecruiterName" Text="Reggie Miller" FontSize="10">
 				</Label>

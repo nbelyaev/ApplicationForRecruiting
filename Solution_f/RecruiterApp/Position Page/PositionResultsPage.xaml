@@ -3,8 +3,8 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<StackLayout>
-			<Label Text="{Binding positions.Name}" Font="25" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
-			<Label Text="{Binding positions.Description}" HorizontalTextAlignment="Center" />
+			<Label x:Name="positionName" Text="{Binding position.Name}" Font="25" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+			<Label x:Name="positionDescription" Text="{Binding position.Description}" HorizontalTextAlignment="Center" />
 			</StackLayout>
 			<Grid RowSpacing="0">
 				<Grid.RowDefinitions>
@@ -16,13 +16,13 @@
 				</StackLayout>
 				<ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
 				<ListView x:Name="positionCandidateList" ItemTapped="onItemTapped" 
-						IsPullToRefreshEnabled="true" Refreshing="OnRefresh" 
+						IsPullToRefreshEnabled="true" Refreshing="OnRefresh"  
 						Grid.Row="1" ItemsSource="{Binding Candidates}">
 					<ListView.ItemTemplate>
 						<DataTemplate>
 							<ViewCell>
 								<ViewCell.ContextActions>
-									<MenuItem Clicked="OnComplete" CommandParameter="{Binding Candidates}" />
+									<MenuItem  CommandParameter="{Binding id}" />
 								</ViewCell.ContextActions>
 								<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
 									<StackLayout Padding="7,0,0,0" VerticalOptions="StartAndExpand" Orientation="Horizontal">
@@ -37,4 +37,7 @@
 			</Grid>
 		</StackLayout>
 	</ContentPage.Content>
+  <ContentPage.ToolbarItems>
+	<ToolbarItem Name="newPosition" Text="Edit"  Clicked="editPosition" CommandParameter="{Binding position}"></ToolbarItem>
+	</ContentPage.ToolbarItems>
 </ContentPage>

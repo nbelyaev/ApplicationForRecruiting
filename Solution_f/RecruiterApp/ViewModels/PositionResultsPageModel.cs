@@ -10,37 +10,37 @@ namespace RecruiterApp
 
 
         private ItemManager manager = ItemManager.DefaultManager;
-        public Position positions { get; set; }
-        //    { get {
-        //        return positions;
-        //    }
+        public Position position { get; set; }
+       
+		public List<Candidate> Candidates { get; set; }
+
+        //fills out list of candidates based on position selected
+        public async Task GetCandidates() {
+            var candidates = await manager.GetCandidatesForPositionAsync(position);
+            Candidates = new List<Candidate>(candidates);
+        }
+
+
+
+
+        //private Candidate _selectedItem;
+        //public Candidate SelectedItem {
+        //    get { return _selectedItem; }
         //    set {
-        //        positions = value;
-        //        //GetCandidates();
+        //        if (_selectedItem != value) {
+        //            _selectedItem = value;
+        //            //OnPropertyChanged();
+
+        //            //this can be placed before or after propertychanged notification raised, 
+        //            //depending on the situation
+        //            DoSomeDataOperation();
+
+        //            Navigation.PushAsync(new CandidateDetailsPage());
+        //        }
         //    }
         //}
 
-		public List<Candidate> Candidates { get; set; }
-        //{
-        //    //Testing for monica
-        //    get {
-        //        //return await manager.GetCandidatesForPositionAsync();
-        //        return Candidates;
-        //        }
-        //    set {
-        //        Candidates = value;
-        //    }
-            
-        //  }
 
-            //public PositionResultsPageModel() {
-            //    GetCandidates();
-            //}
-
-        public async Task GetCandidates() {
-            var candidates = await manager.GetCandidatesForPositionAsync(positions);
-            Candidates = new List<Candidate>(candidates);
-        }
     }
 }
 

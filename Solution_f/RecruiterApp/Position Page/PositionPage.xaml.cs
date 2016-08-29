@@ -29,7 +29,7 @@ namespace RecruiterApp
 			Position item = (Position)e.Item;
 
 			var positionSelected = new PositionResultsPageModel();
-			positionSelected.positions = item;
+			positionSelected.position = item;
 
             await positionSelected.GetCandidates();
 
@@ -50,6 +50,7 @@ namespace RecruiterApp
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
+            
 
 			// Set syncItems to true in order to synchronize the data on startup when running in offline mode
 			await RefreshItems(true, syncItems: false);

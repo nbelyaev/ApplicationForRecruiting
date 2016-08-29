@@ -33,11 +33,8 @@ namespace RecruiterApp {
             set { description = value; }
         }
 
-        //[JsonProperty(PropertyName = "deleted")]
-        //public bool Deleted {
-        //    get { return deleted; }
-        //    set { deleted = value; }
-        //}
+        [JsonProperty(PropertyName = "deleted")]
+        public bool Deleted { get; set; }
 
 
         [Version]

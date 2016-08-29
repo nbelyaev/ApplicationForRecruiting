@@ -44,6 +44,9 @@ namespace RecruiterApp
         public string clearedBackgroundComments { get; set; }
         public string sogetiResumeComments { get; set; }
 
+
+        [JsonProperty(PropertyName = "deleted")]
+        public bool Deleted { get; set; }
         [Version]
         public string Version { get; set; }
     }

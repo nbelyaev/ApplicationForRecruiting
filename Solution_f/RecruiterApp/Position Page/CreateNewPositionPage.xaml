@@ -17,7 +17,7 @@
 
 			</StackLayout>
 			<StackLayout Spacing="0">
-			<Button	Text="Add new Position" BackgroundColor="Green" TextColor="White" Clicked="createNewPosition"/>
+			<Button	Text="Save Position" BackgroundColor="Green" TextColor="White" Clicked="createNewPosition"/>
 			<Button	Text="Cancel" BackgroundColor="Red" TextColor="White" Clicked="cancelBttn"/>
 			</StackLayout>
 

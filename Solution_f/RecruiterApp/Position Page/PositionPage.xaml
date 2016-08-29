@@ -6,7 +6,6 @@
 		<Grid RowSpacing="0">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto" />
-				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
 			<ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
 			<ListView x:Name="listOfPositions" ItemTapped="onItemTapped" IsPullToRefreshEnabled="true" Refreshing="OnRefresh" Grid.Row="1" ItemsSource="{Binding Positions}">
@@ -16,10 +15,14 @@
 							<ViewCell.ContextActions>
 								<MenuItem  CommandParameter="{Binding Name}" />
 							</ViewCell.ContextActions>
-							<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
-								<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+							<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+								<StackLayout  VerticalOptions="StartAndExpand" Orientation="Vertical">
+                  <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15" >
+                    
 									<Label Text="{Binding Name}" />
-								</StackLayout>
+                  
+                  </StackLayout>
+                </StackLayout>
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>

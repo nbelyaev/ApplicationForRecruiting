@@ -12,29 +12,38 @@ namespace RecruiterApp
 		public PositionResultsPage()
 		{
 			InitializeComponent();
-			//loadCandidateTable();
 		}
 
-		//Binds the candidate table in the xaml file
-		public void loadCandidateTable()
-		{
-			positionResultsVM = new PositionResultsPageModel();
-			BindingContext = positionResultsVM;
 
-		}
-		//opens the informationAboutCanidatePage
-		public void onItemTapped(object sender, ItemTappedEventArgs e)
-		{
-			// item = e.Item as Candidate;
-			//var selectedPosition = new PositionResultsPage();
-			//selectedPosition.BindingContext = item;
-			////DisplayAlert("Alert", "Item Selected: " + item.positionId, "OK");
-			Navigation.PushAsync(new InformationAboutCandidatePage());
+        //opens the informationAboutCanidatePage
+        //ItemTapped="onItemTapped"
+        public void onItemTapped(object sender, ItemTappedEventArgs e) {
+            //var mi = ((MenuItem)sender);
+            //var cand = mi.CommandParameter as Candidate;
+
+
+            var cand = e.Item as Candidate;
+
+
+
+            //here you would pass candidate who's info you want to display
+            Navigation.PushAsync(new CandidateDetailsPage(cand));
+
+            //Navigation.PushAsync(new CandidateDetailsPage());
+
+
+
+            // item = e.Item as Candidate;
+            //var selectedPosition = new PositionResultsPage();
+            //selectedPosition.BindingContext = item;
+            ////DisplayAlert("Alert", "Item Selected: " + item.positionId, "OK");
+            //Navigation.PushAsync(new InformationAboutCandidatePage());
 		}
 
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
+            //positionName.Text = 
 
 			// Set syncItems to true in order to synchronize the data on startup when running in offline mode
 			//await RefreshItems(true, syncItems: false);
@@ -72,6 +81,7 @@ namespace RecruiterApp
 		public async void OnRefresh(object sender, EventArgs e)
 		{
 			var list = (ListView)sender;
+            
 			Exception error = null;
 			try
 			{
@@ -96,59 +106,47 @@ namespace RecruiterApp
 		{
 			using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
 			{
-				//positionList.ItemsSource = await manager.GetTodoItemsAsync(syncItems);
+
+                positionCandidateList.ItemsSource = positionCandidateList.ItemsSource;
 			}
 		}
 
-		public async void OnComplete(object sender, EventArgs e)
-		{
-			var mi = ((MenuItem)sender);
-			var pos = mi.CommandParameter as Position;
-			await CompleteItem(pos);
-		}
+        //public async void OnComplete(object sender, EventArgs e)
+        //{
+        //	var mi = ((MenuItem)sender);
+        //	var pos = mi.CommandParameter as Position;
+        //	await CompleteItem(pos);
+        //}
 
-		async Task CompleteItem(Position position)
-		{
-			//await manager.GetPositionItemsAsync(true);
-			//positionList.ItemsSource = await manager.GetPositionItemsAsync();
-		}
 
-		//private class ActivityIndicatorScope : IDisposable
+
+        //it appears that this one is never called, instead onItemTapped is being tapped.
+        //public void OnCandidateClick(object sender, EventArgs e) {
+        //    var mi = ((MenuItem)sender);
+        //    var cand = mi.CommandParameter as Candidate;
+
+        //    //here you would pass candidate who's info you want to display
+        //    //Navigation.PushAsync(new CandidateDetailsPage(cand));
+
+        //    Navigation.PushAsync(new CandidateDetailsPage());
+        //}
+
+        public void editPosition(object sender, EventArgs e) {
+            //PositionResultsPageModel n = ((PositionResultsPageModel)BindingContext);
+            var mi = ((ToolbarItem)sender);
+            var pos = mi.CommandParameter as Position;
+
+            Navigation.PushAsync(new CreateNewPositionPage(pos));
+
+        }
+
+  //      async Task CompleteItem(Position position)
 		//{
-		//	private bool showIndicator;
-		//	private ActivityIndicator indicator;
-		//	private Task indicatorDelay;
-
-		//	public ActivityIndicatorScope(ActivityIndicator indicator, bool showIndicator)
-		//	{
-		//		this.indicator = indicator;
-		//		this.showIndicator = showIndicator;
-
-		//		if (showIndicator)
-		//		{
-		//			indicatorDelay = Task.Delay(2000);
-		//			SetIndicatorActivity(true);
-		//		}
-		//		else
-		//		{
-		//			indicatorDelay = Task.FromResult(0);
-		//		}
-		//	}
-
-		//	private void SetIndicatorActivity(bool isActive)
-		//	{
-		//		this.indicator.IsVisible = isActive;
-		//		this.indicator.IsRunning = isActive;
-		//	}
-
-		//	public void Dispose()
-		//	{
-		//		if (showIndicator)
-		//		{
-		//			indicatorDelay.ContinueWith(t => SetIndicatorActivity(false), TaskScheduler.FromCurrentSynchronizationContext());
-		//		}
-		//	}
+		//	//await manager.GetPositionItemsAsync(true);
+		//	//positionList.ItemsSource = await manager.GetPositionItemsAsync();
 		//}
+
+		
 	}
 }
 

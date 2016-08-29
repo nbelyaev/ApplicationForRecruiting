@@ -67,7 +67,6 @@ C:\Users\nbelyaev\Desktop\Recruiter App\Solution_8-4\RecruiterApp\obj\Debug\Recr
 C:\Users\nbelyaev\Desktop\Recruiter App\Solution_8-4\RecruiterApp\obj\Debug\RecruiterApp.pdb
 C:\Users\nbelyaev\Desktop\Recruiter App\Solution_8-4\RecruiterApp\obj\Debug\RecruiterApp.dll.mdb
 C:\Users\nbelyaev\Desktop\Recruiter App\Solution_8-4\RecruiterApp\bin\Debug\RecruiterApp.dll.mdb
-C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.Candidate_Page.CandidateResults.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\RecruiterApp.dll.config
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\RecruiterApp.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\RecruiterApp.pdb
@@ -104,10 +103,13 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterAp
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.Search_Page.SearchPageResults.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.Candidate_Page.CandidatePage.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.Candidate_Page.CandidateDetailsPage.xaml.g.cs
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.Candidate_Page.CandidateResults.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.Candidate_Page.CreateNewCandidatePage.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.History_Page.HistoryPage.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.History_Page.InformationAboutCandidatePage.xaml.g.cs
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.pdb
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.dll.mdb
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\RecruiterApp.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\RecruiterApp.dll.mdb

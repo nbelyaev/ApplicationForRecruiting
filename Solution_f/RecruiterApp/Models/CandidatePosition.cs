@@ -14,6 +14,10 @@ namespace RecruiterApp
 
 		[JsonProperty(PropertyName = "positionId")]
 		public string PositionId { get; set; }
+
+        [JsonProperty(PropertyName = "deleted")]
+        public bool Deleted { get; set; }
+        
     }
 }
 

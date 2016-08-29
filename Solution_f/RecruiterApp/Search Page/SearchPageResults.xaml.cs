@@ -30,7 +30,7 @@ namespace RecruiterApp
 			//selectedPosition.BindingContext = item;
 			var item = e.Item as Position;
 			var selectedPosition = new PositionResultsPageModel();
-			selectedPosition.positions = item;
+			selectedPosition.position = item;
 			var selectedPositionPage = new PositionResultsPage();
 			selectedPositionPage.BindingContext = selectedPosition;
 			////DisplayAlert("Alert", "Item Selected: " + item.positionId, "OK");
