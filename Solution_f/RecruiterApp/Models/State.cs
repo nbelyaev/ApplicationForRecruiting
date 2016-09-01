@@ -1,5 +1,8 @@
 ﻿using System;
 using Newtonsoft.Json;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace RecruiterApp
 {
 	public class State
@@ -12,6 +15,8 @@ namespace RecruiterApp
 
 		[JsonProperty(PropertyName = "StateName")]
 		public string StateName { get { return this.name; } set { this.name = value; } }
-	}
+
+        public virtual ICollection<Candidate> Candidate { get; set; }
+    }
 }
 

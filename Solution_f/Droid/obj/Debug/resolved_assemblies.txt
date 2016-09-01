@@ -19,6 +19,7 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\D
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\Java.Interop.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\Mono.Android.dll
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.Core.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.Net.Http.dll

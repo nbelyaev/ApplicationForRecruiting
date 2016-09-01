@@ -72,6 +72,7 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterAp
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\RecruiterApp.pdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.ComponentModel.DataAnnotations.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.Extensions.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.Formatting.dll
@@ -79,7 +80,11 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterAp
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Xamarin.Forms.Core.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.dll
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Core.dll
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Xml.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.ComponentModel.DataAnnotations.xml
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.xml
@@ -90,6 +95,9 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterAp
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.xml
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Core.xml
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\bin\Debug\System.Xml.xml
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.csproj.App.config
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.csprojResolveAssemblyReference.cache
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\RecruiterApp\obj\Debug\RecruiterApp.TodoList.xaml.g.cs

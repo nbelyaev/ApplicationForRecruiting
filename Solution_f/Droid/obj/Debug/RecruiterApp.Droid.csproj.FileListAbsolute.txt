@@ -210,6 +210,7 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\D
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\Mono.CSharp.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\mscorlib.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\System.Core.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\System.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\bin\Debug\System.Net.Http.dll.mdb
@@ -226,6 +227,7 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\D
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\RecruiterApp.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\RecruiterApp.Droid.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.Core.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.dll.mdb
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\Solution_f\Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb

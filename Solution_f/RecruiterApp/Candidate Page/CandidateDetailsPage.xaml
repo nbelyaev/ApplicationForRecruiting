@@ -23,7 +23,7 @@
 				</Label>
 				<Label  x:Name="lblRecruiterName" Text="Reggie Miller" FontSize="10">
 				</Label>
-				<Label  x:Name="lblStreet" Text="1111 N. Odell">
+				<Label  x:Name="lblStreet" Text="{Binding addressString}">
 				</Label>
 				<Label  x:Name="lblCityStateZip" Text="Niles, IL 60714">
 				</Label>

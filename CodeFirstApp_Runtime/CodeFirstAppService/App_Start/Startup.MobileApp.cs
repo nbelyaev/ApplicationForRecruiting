@@ -181,10 +181,14 @@ namespace CodeFirstAppService
             {
                 new Candidate { Id = Guid.NewGuid().ToString(), city="Chicago", candidateInfoNotes="ok candidate",
                     clearedBackgroundComments ="spoopy", firstName="Eric", lastName="Ruelas", State=States[0],
-                    Recruiter = Users[1], Source=Sources[0] },
+                    Recruiter = Users[1], Source=Sources[0], email="email",
+                    detailsAndReferencesComments ="detail comment", completedApplicationComments="compapp comment",
+                 formalOfferComments="form offer comm", zip="23233", street="1 street", street2="2 street"},
                 new Candidate { Id = Guid.NewGuid().ToString(), city="Chicago", candidateInfoNotes="ok candidate",
                     clearedBackgroundComments ="spoopy", firstName="Cristian", lastName="Pintedo", State=States[0],
-                    Recruiter = Users[1], Source=Sources[0]  },
+                    Recruiter = Users[1], Source=Sources[0], email="email",
+                    detailsAndReferencesComments ="detail comment", completedApplicationComments="compapp comment",
+                 formalOfferComments="form offer comm", zip="23233" , street="1 street", street2="2 street" },
             };
 
             foreach (Candidate Candidate in Candidates) {

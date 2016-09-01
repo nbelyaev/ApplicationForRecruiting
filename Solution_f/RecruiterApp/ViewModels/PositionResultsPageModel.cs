@@ -20,27 +20,7 @@ namespace RecruiterApp
             Candidates = new List<Candidate>(candidates);
         }
 
-
-
-
-        //private Candidate _selectedItem;
-        //public Candidate SelectedItem {
-        //    get { return _selectedItem; }
-        //    set {
-        //        if (_selectedItem != value) {
-        //            _selectedItem = value;
-        //            //OnPropertyChanged();
-
-        //            //this can be placed before or after propertychanged notification raised, 
-        //            //depending on the situation
-        //            DoSomeDataOperation();
-
-        //            Navigation.PushAsync(new CandidateDetailsPage());
-        //        }
-        //    }
-        //}
-
-
+        
     }
 }
 

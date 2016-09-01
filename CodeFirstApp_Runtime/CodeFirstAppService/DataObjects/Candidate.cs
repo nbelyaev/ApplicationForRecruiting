@@ -16,7 +16,7 @@ namespace CodeFirstAppService.DataObjects {
 		public string city { get; set; }
 		public string zip { get; set; }
 
-		//public int StateId { get; set; }
+		//public string StateId { get; set; }
         public virtual State State { get; set; }
 
         //public int RecruiterId { get; set; }

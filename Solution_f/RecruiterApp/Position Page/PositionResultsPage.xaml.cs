@@ -18,26 +18,16 @@ namespace RecruiterApp
         //opens the informationAboutCanidatePage
         //ItemTapped="onItemTapped"
         public void onItemTapped(object sender, ItemTappedEventArgs e) {
-            //var mi = ((MenuItem)sender);
-            //var cand = mi.CommandParameter as Candidate;
+            
 
 
             var cand = e.Item as Candidate;
-
-
-
-            //here you would pass candidate who's info you want to display
+            
+            //here you pass candidate who's info you want to display
             Navigation.PushAsync(new CandidateDetailsPage(cand));
 
             //Navigation.PushAsync(new CandidateDetailsPage());
-
-
-
-            // item = e.Item as Candidate;
-            //var selectedPosition = new PositionResultsPage();
-            //selectedPosition.BindingContext = item;
-            ////DisplayAlert("Alert", "Item Selected: " + item.positionId, "OK");
-            //Navigation.PushAsync(new InformationAboutCandidatePage());
+            
 		}
 
 		protected override async void OnAppearing()
@@ -48,11 +38,7 @@ namespace RecruiterApp
 			// Set syncItems to true in order to synchronize the data on startup when running in offline mode
 			//await RefreshItems(true, syncItems: false);
 		}
-		//async Task CompleteCandidate(Candidate candidate)
-		//{
-		//	await manager.SaveNewPositionAsync(position);
-		//	positionList.ItemsSource = await manager.GetTodoItemsAsync();
-		//}
+		
 
 		public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
 		{
@@ -110,26 +96,7 @@ namespace RecruiterApp
                 positionCandidateList.ItemsSource = positionCandidateList.ItemsSource;
 			}
 		}
-
-        //public async void OnComplete(object sender, EventArgs e)
-        //{
-        //	var mi = ((MenuItem)sender);
-        //	var pos = mi.CommandParameter as Position;
-        //	await CompleteItem(pos);
-        //}
-
-
-
-        //it appears that this one is never called, instead onItemTapped is being tapped.
-        //public void OnCandidateClick(object sender, EventArgs e) {
-        //    var mi = ((MenuItem)sender);
-        //    var cand = mi.CommandParameter as Candidate;
-
-        //    //here you would pass candidate who's info you want to display
-        //    //Navigation.PushAsync(new CandidateDetailsPage(cand));
-
-        //    Navigation.PushAsync(new CandidateDetailsPage());
-        //}
+        
 
         public void editPosition(object sender, EventArgs e) {
             //PositionResultsPageModel n = ((PositionResultsPageModel)BindingContext);
@@ -139,12 +106,7 @@ namespace RecruiterApp
             Navigation.PushAsync(new CreateNewPositionPage(pos));
 
         }
-
-  //      async Task CompleteItem(Position position)
-		//{
-		//	//await manager.GetPositionItemsAsync(true);
-		//	//positionList.ItemsSource = await manager.GetPositionItemsAsync();
-		//}
+        
 
 		
 	}

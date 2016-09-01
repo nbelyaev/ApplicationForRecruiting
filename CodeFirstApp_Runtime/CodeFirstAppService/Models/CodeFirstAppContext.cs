@@ -20,6 +20,8 @@ namespace CodeFirstAppService.Models
 
         public CodeFirstAppContext() : base(connectionStringName)
         {
+            Configuration.LazyLoadingEnabled = true;
+            Configuration.ProxyCreationEnabled = true;
         } 
 
         public DbSet<TodoItem> TodoItems { get; set; }//unnecessary, used only for testing
@@ -45,6 +47,9 @@ namespace CodeFirstAppService.Models
             modelBuilder.Conventions.Add(
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
+
+            /////////////
+            base.OnModelCreating(modelBuilder);
         }
     }
 

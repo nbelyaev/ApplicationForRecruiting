@@ -259,5 +259,6 @@ C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\C
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\CodeFirstAppService\bin\ru\System.Spatial.resources.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\CodeFirstAppService\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\CodeFirstAppService\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\CodeFirstAppService\obj\Debug\CodeFirstAppService.csprojResolveAssemblyReference.cache
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\CodeFirstAppService\obj\Debug\CodeFirstAppService.dll
 C:\Users\nbelyaev\Desktop\8-19 Recruiting App and Runtime\CodeFirstApp_Runtime\CodeFirstAppService\obj\Debug\CodeFirstAppService.pdb

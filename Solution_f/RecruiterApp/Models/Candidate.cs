@@ -1,6 +1,8 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
 using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace RecruiterApp
 {
 	public class Candidate
@@ -15,6 +17,14 @@ namespace RecruiterApp
             }
         }
 
+        public string addressString {//figure out how to pull state first
+            get {
+                return state.StateName ;
+                //return " this is a string";
+            }
+        }
+
+        [Key]
         [JsonProperty(PropertyName = "id")]
         public string id { get; set; }
 
@@ -22,12 +32,23 @@ namespace RecruiterApp
         public string firstName { get; set; }
         [JsonProperty(PropertyName = "lastName")]
         public string lastName { get; set; }
+        [JsonProperty(PropertyName = "email")]
         public string email { get; set; }
+        [JsonProperty(PropertyName = "street")]
         public string street { get; set; }
+        [JsonProperty(PropertyName = "street2")]
         public string street2 { get; set; }
+        [JsonProperty(PropertyName = "city")]
         public string city { get; set; }
+        [JsonProperty(PropertyName = "zip")]
         public string zip { get; set; }
-        public int stateId { get; set; }
+
+
+        //public string stateId { get; set; }
+        [JsonProperty(PropertyName = "state")]
+        public virtual State state { get; set; }
+
+
         public int recruiterContactId { get; set; }
         public int sourceId { get; set; }
         public DateTime creationTime { get; set; }
